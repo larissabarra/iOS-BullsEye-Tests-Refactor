@@ -33,6 +33,14 @@ class BullsEye: Game {
     let difference = abs(target - guess)
     var points = 100 - difference
     
+    points += calculateBonus(forDifference: difference)
+    
+    score += points
+    return points
+  }
+  
+  private func calculateBonus(forDifference difference: Int) -> Int {
+    var points = 0
     if difference == 0 {
       points += 100
     } else if difference < 5 {
@@ -40,7 +48,6 @@ class BullsEye: Game {
         points += 50
       }
     }
-    score += points
     return points
   }
   
