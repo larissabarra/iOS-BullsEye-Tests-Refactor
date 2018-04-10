@@ -43,7 +43,7 @@ class BullsEyeSpecs: QuickSpec {
       }
       
       describe("reset") {
-        it("resets score") {
+        it("resets score to 0") {
           expect(bullsEye.score).to(equal(0))
         }
         
