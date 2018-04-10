@@ -7,6 +7,7 @@ protocol Game {
   
   func newRound()
   func reset()
+  func hit(guess: Int) -> Int
 }
 
 class BullsEye: Game {
@@ -26,6 +27,21 @@ class BullsEye: Game {
   func reset() {
     score = 0
     round = 1
+  }
+  
+  func hit(guess: Int) -> Int {
+    let difference = abs(target - guess)
+    var points = 100 - difference
+    
+    if difference == 0 {
+      points += 100
+    } else if difference < 5 {
+      if difference == 1 {
+        points += 50
+      }
+    }
+    score += points
+    return points
   }
   
   private func generateRandomNumber() -> Int {

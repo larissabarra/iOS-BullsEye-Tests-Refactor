@@ -62,6 +62,34 @@ class BullsEyeSpecs: QuickSpec {
           expect(bullsEye.target).to(beLessThanOrEqualTo(100))
         }
       }
+      
+      describe("hit") {
+        it("returns 200 points for perfect guess") {
+          let target = bullsEye.target
+          let points = bullsEye.hit(guess: target)
+          expect(points).to(equal(200))
+        }
+        
+        it("returns 149 points for almost perfect guess") {
+          let target = bullsEye.target
+          let points = bullsEye.hit(guess: target-1)
+          expect(points).to(equal(149))
+        }
+        
+        it("returns less than 100 points for wrong guess") {
+          let target = bullsEye.target
+          let points = bullsEye.hit(guess: target-2)
+          expect(points).to(beLessThan(100))
+        }
+        
+        it("increments score for every guess that gives non zero score") {
+          let previousScore = bullsEye.score
+          
+          _ = bullsEye.hit(guess: 1)
+          
+          expect(bullsEye.score).to(beGreaterThan(previousScore))
+        }
+      }
     }
   }
 }
