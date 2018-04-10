@@ -76,22 +76,26 @@ class BullsEyeSpecs: QuickSpec {
       }
       
       describe("hit") {
+        beforeEach {
+          bullsEye.reset()
+        }
+        
         it("returns 100 points + 100 bonus points for perfect guess") {
           let target = bullsEye.target
-          let points = bullsEye.hit(guess: target)
-          expect(points).to(equal(200))
+          _ = bullsEye.hit(guess: target)
+          expect(bullsEye.score).to(equal(200))
         }
         
         it("returns 99 points + 50 bonus points for almost perfect guess") {
           let target = bullsEye.target
-          let points = bullsEye.hit(guess: abs(target-1))
-          expect(points).to(equal(149))
+          _ = bullsEye.hit(guess: abs(target-1))
+          expect(bullsEye.score).to(equal(149))
         }
         
         it("returns less than 100 points for wrong guess") {
           let target = bullsEye.target
-          let points = bullsEye.hit(guess: abs(target-50))
-          expect(points).to(beLessThan(100))
+          _ = bullsEye.hit(guess: abs(target-50))
+          expect(bullsEye.score).to(beLessThan(100))
         }
         
         it("increments score for every guess that gives non zero score") {
