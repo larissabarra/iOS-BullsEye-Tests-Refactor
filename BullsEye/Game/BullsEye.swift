@@ -3,14 +3,16 @@ import Foundation
 protocol Game {
   var round: Int { get }
   var target: Int { get }
+  var score: Int { get }
   
   func newRound()
-  func hit(guess: Int) -> Int
+  func reset()
 }
 
 class BullsEye: Game {
   var round = 1
   var target = 0
+  var score = 0
   
   init() {
     target = generateRandomNumber()
@@ -21,8 +23,9 @@ class BullsEye: Game {
     target = generateRandomNumber()
   }
   
-  func hit(guess: Int) -> Int {
-    <#code#>
+  func reset() {
+    score = 0
+    round = 1
   }
   
   private func generateRandomNumber() -> Int {

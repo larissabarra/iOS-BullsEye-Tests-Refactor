@@ -42,6 +42,20 @@ class BullsEyeSpecs: QuickSpec {
         }
       }
       
+      describe("reset") {
+        it("resets score") {
+          expect(bullsEye.score).to(equal(0))
+        }
+        
+        it("resets round to 1") {
+          bullsEye.newRound()
+          expect(bullsEye.round).to(equal(2))
+          
+          bullsEye.reset()
+          expect(bullsEye.round).to(equal(1))
+        }
+      }
+      
       describe("target") {
         it("is between 0 and 100") {
           expect(bullsEye.target).to(beGreaterThanOrEqualTo(0))
