@@ -27,6 +27,7 @@ class BullsEye: Game {
   func reset() {
     score = 0
     round = 1
+    target = generateRandomNumber()
   }
   
   func hit(guess: Int) -> Int {

@@ -44,15 +44,27 @@ class BullsEyeSpecs: QuickSpec {
       
       describe("reset") {
         it("resets score to 0") {
+          _ = bullsEye.hit(guess: 90)
+          
+          bullsEye.reset()
+          
           expect(bullsEye.score).to(equal(0))
         }
         
         it("resets round to 1") {
           bullsEye.newRound()
-          expect(bullsEye.round).to(equal(2))
           
           bullsEye.reset()
+          
           expect(bullsEye.round).to(equal(1))
+        }
+        
+        it("generates new target value") {
+          let oldTarget = bullsEye.target
+          
+          bullsEye.reset()
+          
+          expect(bullsEye.target).notTo(equal(oldTarget))
         }
       }
       
