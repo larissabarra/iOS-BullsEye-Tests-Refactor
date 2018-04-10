@@ -64,13 +64,13 @@ class BullsEyeSpecs: QuickSpec {
       }
       
       describe("hit") {
-        it("returns 200 points for perfect guess") {
+        it("returns 100 points + 100 bonus points for perfect guess") {
           let target = bullsEye.target
           let points = bullsEye.hit(guess: target)
           expect(points).to(equal(200))
         }
         
-        it("returns 149 points for almost perfect guess") {
+        it("returns 99 points + 50 bonus points for almost perfect guess") {
           let target = bullsEye.target
           let points = bullsEye.hit(guess: abs(target-1))
           expect(points).to(equal(149))
