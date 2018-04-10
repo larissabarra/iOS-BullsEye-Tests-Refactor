@@ -76,26 +76,63 @@ class BullsEyeSpecs: QuickSpec {
       }
       
       describe("hit") {
+        var target = -1
+          
         beforeEach {
           bullsEye.reset()
+          target = bullsEye.target
         }
         
-        it("returns 100 points + 100 bonus points for perfect guess") {
-          let target = bullsEye.target
-          _ = bullsEye.hit(guess: target)
-          expect(bullsEye.score).to(equal(200))
+        context("player makes perfect guess") {
+          it("scores 100 points + 100 bonus points") {
+            _ = bullsEye.hit(guess: target)
+            expect(bullsEye.score).to(equal(200))
+          }
+          
+          it("returns perfection level as perfect") {
+            let level = bullsEye.hit(guess: target)
+            expect(level).to(equal(PerfectionLevel.perfect))
+          }
         }
         
-        it("returns 99 points + 50 bonus points for almost perfect guess") {
-          let target = bullsEye.target
-          _ = bullsEye.hit(guess: abs(target-1))
-          expect(bullsEye.score).to(equal(149))
+        context("player misses by 1") {
+          it("returns 99 points + 50 bonus points") {
+            _ = bullsEye.hit(guess: abs(target-1))
+            expect(bullsEye.score).to(equal(149))
+          }
+          
+          it("returns perfection level as almost") {
+            let level = bullsEye.hit(guess: abs(target-1))
+            expect(level).to(equal(PerfectionLevel.almost))
+          }
         }
         
-        it("returns less than 100 points for wrong guess") {
-          let target = bullsEye.target
-          _ = bullsEye.hit(guess: abs(target-50))
-          expect(bullsEye.score).to(beLessThan(100))
+        context("player misses by 10") {
+          it("returns less than 100 points") {
+            bullsEye.target = 50
+            _ = bullsEye.hit(guess: 60)
+            expect(bullsEye.score).to(beLessThanOrEqualTo(90))
+          }
+          
+          it("returns perfection level as good") {
+            bullsEye.target = 50
+            let level = bullsEye.hit(guess: 60)
+            expect(level).to(equal(PerfectionLevel.good))
+          }
+        }
+        
+        context("player misses by more than 10") {
+          it("returns less than 100 points") {
+            bullsEye.target = 50
+            _ = bullsEye.hit(guess: 20)
+            expect(bullsEye.score).to(beLessThan(90))
+          }
+          
+          it("returns perfection level as bad") {
+            bullsEye.target = 50
+            let level = bullsEye.hit(guess: 20)
+            expect(level).to(equal(PerfectionLevel.bad))
+          }
         }
         
         it("increments score for every guess that gives non zero score") {

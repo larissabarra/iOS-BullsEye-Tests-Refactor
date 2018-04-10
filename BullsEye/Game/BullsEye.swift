@@ -7,10 +7,10 @@ protocol Game {
   
   func newRound()
   func reset()
-  func hit(guess: Int) -> Perfection
+  func hit(guess: Int) -> PerfectionLevel
 }
 
-enum Perfection: Int {
+enum PerfectionLevel: Int {
   case perfect
   case almost
   case good
@@ -37,7 +37,7 @@ class BullsEye: Game {
     target = generateRandomNumber()
   }
   
-  func hit(guess: Int) -> Perfection {
+  func hit(guess: Int) -> PerfectionLevel {
     let difference = abs(target - guess)
     var points = 100 - difference
     
@@ -47,13 +47,13 @@ class BullsEye: Game {
     
     switch difference {
     case 0:
-      return Perfection.perfect
+      return PerfectionLevel.perfect
     case 1...5:
-      return Perfection.almost
+      return PerfectionLevel.almost
     case 6...10:
-      return Perfection.good
+      return PerfectionLevel.good
     default:
-      return Perfection.bad
+      return PerfectionLevel.bad
     }
   }
   
