@@ -1,6 +1,8 @@
 import UIKit
 
 class GameViewController: UIViewController {
+  unowned var presenter: GamePresenter?
+  
   @IBOutlet weak var slider: UISlider!
   @IBOutlet weak var targetLabel: UILabel!
   @IBOutlet weak var scoreLabel: UILabel!
@@ -17,5 +19,9 @@ class GameViewController: UIViewController {
   
   @IBAction func startNewGame() {
     
+  }
+  
+  func updateScoreLabel(value: Int) {
+    scoreLabel.text = String(value)
   }
 }
