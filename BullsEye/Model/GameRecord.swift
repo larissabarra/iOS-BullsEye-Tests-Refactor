@@ -6,7 +6,7 @@
 //  Copyright © 2018 Razeware. All rights reserved.
 //
 
-struct Score: Codable {
+struct GameRecord: Codable {
   let name: String?
   let score: Int?
   

@@ -16,7 +16,7 @@ class ScoresViewController: UIViewController {
   let defaultSession = URLSession(configuration: .default)
   var dataTask: URLSessionDataTask?
     
-  var scores: [Score] = [] {
+  var scores: [GameRecord] = [] {
     didSet {
       DispatchQueue.main.async {
         self.highScoresTableView.reloadData()
@@ -44,7 +44,7 @@ class ScoresViewController: UIViewController {
   private func parse(jsonData data: Data) {
     do {
       let decoder = JSONDecoder()
-      let scores = try decoder.decode([Score].self, from: data)
+      let scores = try decoder.decode([GameRecord].self, from: data)
       self.scores = scores
     } catch {
       print(error.localizedDescription)
