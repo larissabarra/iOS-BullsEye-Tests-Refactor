@@ -1,5 +1,5 @@
 class GamePresenter {
-  unowned let view: GameViewController
+  let view: GameViewController
   let game: Game
   
   init(view: GameViewController, game: Game = BullsEye()) {

@@ -21,8 +21,10 @@ class GameViewControllerSpecs: QuickSpec {
         self.viewController = nil
       }
       
+      describe
+      
       describe("updateScoreLabel") {
-        it("") {
+        it("updates label with proper value") {
           self.viewController.updateScoreLabel(value: 10)
           
           expect(self.viewController.scoreLabel.text).to(equal("10"))
