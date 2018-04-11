@@ -9,10 +9,15 @@ class GameMock: Game {
   var didCallHit = false
   var didCallHitWithValue: Int?
   
+  var calledReset = false
+  
   func newRound() {
   }
   
   func reset() {
+    calledReset = true
+    round = 1
+    score = 0
   }
   
   func hit(guess: Int) -> Score {

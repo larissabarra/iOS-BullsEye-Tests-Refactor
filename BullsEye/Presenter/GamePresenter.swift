@@ -7,6 +7,8 @@ class GamePresenter {
     self.game = game
     
     self.view?.presenter = self
+    
+    game.reset()
   }
   
   func hit(value: Int) {

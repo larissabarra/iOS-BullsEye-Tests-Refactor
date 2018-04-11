@@ -19,6 +19,15 @@ class GamePresenterSpecs: QuickSpec {
           
           expect(presenter.game).to(beAKindOf(Game.self))
         }
+        
+        it("starts a new game and resets rounds and score") {
+          let gameMock = GameMock()
+          let presenter = GamePresenter(view: GameViewMock(), game: gameMock)
+          
+          expect(gameMock.calledReset).to(beTrue())
+          expect(gameMock.round).to(equal(1))
+          expect(gameMock.score).to(equal(0))
+        }
       }
       
       describe("hit") {
