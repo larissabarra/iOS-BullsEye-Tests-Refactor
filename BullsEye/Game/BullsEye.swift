@@ -10,13 +10,6 @@ protocol Game {
   func hit(guess: Int) -> PerfectionLevel
 }
 
-enum PerfectionLevel: Int {
-  case perfect
-  case almost
-  case good
-  case bad
-}
-
 class BullsEye: Game {
   var round = 1
   var target = 0
