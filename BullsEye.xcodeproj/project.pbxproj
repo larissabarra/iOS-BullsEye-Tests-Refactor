@@ -13,6 +13,7 @@
 		576C24492076721F008E9B82 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C24482076721F008E9B82 /* Score.swift */; };
 		B25FB084207CE76100DA7ED1 /* BullsEye.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FB083207CE76100DA7ED1 /* BullsEye.swift */; };
 		B25FB087207CE79B00DA7ED1 /* BullsEyeSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FB086207CE79B00DA7ED1 /* BullsEyeSpecs.swift */; };
+		B25FB08A207E3A7500DA7ED1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FB089207E3A7500DA7ED1 /* GameViewController.swift */; };
 		B28CD16A207B96E80041CBBC /* BullsEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28CD169207B96E80041CBBC /* BullsEyeTests.swift */; };
 		DD848B731EEBA850007D8A56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD848B721EEBA850007D8A56 /* AppDelegate.swift */; };
 		DD848B751EEBA850007D8A56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD848B741EEBA850007D8A56 /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		828D296BC28C9419C69FB633 /* Pods-BullsEyeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BullsEyeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BullsEyeTests/Pods-BullsEyeTests.release.xcconfig"; sourceTree = "<group>"; };
 		B25FB083207CE76100DA7ED1 /* BullsEye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEye.swift; sourceTree = "<group>"; };
 		B25FB086207CE79B00DA7ED1 /* BullsEyeSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeSpecs.swift; sourceTree = "<group>"; };
+		B25FB089207E3A7500DA7ED1 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B28CD167207B96E70041CBBC /* BullsEyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullsEyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28CD169207B96E80041CBBC /* BullsEyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeTests.swift; sourceTree = "<group>"; };
 		B28CD16B207B96E80041CBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,6 +116,14 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
+		B25FB088207E3A5300DA7ED1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B25FB089207E3A7500DA7ED1 /* GameViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B28CD168207B96E80041CBBC /* BullsEyeTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 		DD848B711EEBA850007D8A56 /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				B25FB088207E3A5300DA7ED1 /* View */,
 				B25FB082207CE75200DA7ED1 /* Game */,
 				576C244720767216008E9B82 /* Model */,
 				DD4643A51EF214F400E877E9 /* BullsEye.html */,
@@ -371,6 +382,7 @@
 				DDFCE69C1EF0D7DF00B42325 /* AboutViewController.swift in Sources */,
 				DD848B751EEBA850007D8A56 /* ViewController.swift in Sources */,
 				DD848B731EEBA850007D8A56 /* AppDelegate.swift in Sources */,
+				B25FB08A207E3A7500DA7ED1 /* GameViewController.swift in Sources */,
 				576C244620766C6B008E9B82 /* ScoreCell.swift in Sources */,
 				576C24492076721F008E9B82 /* Score.swift in Sources */,
 				576C24442076518E008E9B82 /* ScoresViewController.swift in Sources */,
