@@ -1,7 +1,7 @@
 import UIKit
 
 class GameViewController: UIViewController {
-  var presenter: GamePresenter?
+  weak var presenter: GamePresenter?
   
   @IBOutlet weak var slider: UISlider!
   @IBOutlet weak var targetLabel: UILabel!

@@ -21,8 +21,6 @@ class GameViewControllerSpecs: QuickSpec {
         self.viewController = nil
       }
       
-      describe
-      
       describe("updateScoreLabel") {
         it("updates label with proper value") {
           self.viewController.updateScoreLabel(value: 10)
