@@ -1,7 +1,7 @@
 import UIKit
 
 class GameViewController: UIViewController {
-  weak var presenter: GamePresenter?
+  var presenter: GamePresenter?
   
   @IBOutlet weak var slider: UISlider!
   @IBOutlet weak var targetLabel: UILabel!
@@ -24,5 +24,9 @@ class GameViewController: UIViewController {
   
   func updateScoreLabel(value: Int) {
     scoreLabel.text = String(value)
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    presenter = GamePresenter(view: self)
   }
 }

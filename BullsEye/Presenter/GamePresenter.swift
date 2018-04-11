@@ -1,16 +1,16 @@
 class GamePresenter {
-  let view: GameViewController
+  weak var view: GameViewController?
   let game: Game
   
   init(view: GameViewController, game: Game = BullsEye()) {
     self.view = view
     self.game = game
     
-    view.presenter = self
+    self.view?.presenter = self
   }
   
   func hit(value: Int) {
     _ = game.hit(guess: value)
-    view.updateScoreLabel(value: game.score)
+    view?.updateScoreLabel(value: game.score)
   }
 }
