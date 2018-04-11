@@ -14,7 +14,11 @@
 		B25FB084207CE76100DA7ED1 /* BullsEye.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FB083207CE76100DA7ED1 /* BullsEye.swift */; };
 		B25FB087207CE79B00DA7ED1 /* BullsEyeSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FB086207CE79B00DA7ED1 /* BullsEyeSpecs.swift */; };
 		B25FB08A207E3A7500DA7ED1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FB089207E3A7500DA7ED1 /* GameViewController.swift */; };
-		B28CD16A207B96E80041CBBC /* BullsEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28CD169207B96E80041CBBC /* BullsEyeTests.swift */; };
+		B25FB08D207E3C4700DA7ED1 /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FB08C207E3C4700DA7ED1 /* GamePresenter.swift */; };
+		B25FB090207E3C6700DA7ED1 /* GamePresenterSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FB08F207E3C6700DA7ED1 /* GamePresenterSpecs.swift */; };
+		B25FB093207E43A400DA7ED1 /* GameViewControllerSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FB092207E43A400DA7ED1 /* GameViewControllerSpecs.swift */; };
+		B25FB096207E4A3600DA7ED1 /* GameMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FB095207E4A3600DA7ED1 /* GameMock.swift */; };
+		B25FB098207E4BBB00DA7ED1 /* GameViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FB097207E4BBB00DA7ED1 /* GameViewMock.swift */; };
 		DD848B731EEBA850007D8A56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD848B721EEBA850007D8A56 /* AppDelegate.swift */; };
 		DD848B751EEBA850007D8A56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD848B741EEBA850007D8A56 /* ViewController.swift */; };
 		DD848B781EEBA850007D8A56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD848B761EEBA850007D8A56 /* Main.storyboard */; };
@@ -45,8 +49,12 @@
 		B25FB083207CE76100DA7ED1 /* BullsEye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEye.swift; sourceTree = "<group>"; };
 		B25FB086207CE79B00DA7ED1 /* BullsEyeSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeSpecs.swift; sourceTree = "<group>"; };
 		B25FB089207E3A7500DA7ED1 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		B25FB08C207E3C4700DA7ED1 /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
+		B25FB08F207E3C6700DA7ED1 /* GamePresenterSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenterSpecs.swift; sourceTree = "<group>"; };
+		B25FB092207E43A400DA7ED1 /* GameViewControllerSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewControllerSpecs.swift; sourceTree = "<group>"; };
+		B25FB095207E4A3600DA7ED1 /* GameMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMock.swift; sourceTree = "<group>"; };
+		B25FB097207E4BBB00DA7ED1 /* GameViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewMock.swift; sourceTree = "<group>"; };
 		B28CD167207B96E70041CBBC /* BullsEyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullsEyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B28CD169207B96E80041CBBC /* BullsEyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeTests.swift; sourceTree = "<group>"; };
 		B28CD16B207B96E80041CBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC88DCD7DAA3A76C60CF3BA0 /* Pods_BullsEye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BullsEye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C302A9D5F58B2F2E98D50608 /* Pods-BullsEyeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BullsEyeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BullsEyeTests/Pods-BullsEyeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,11 +132,46 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B25FB08B207E3C3100DA7ED1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B25FB08C207E3C4700DA7ED1 /* GamePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B25FB08E207E3C5400DA7ED1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B25FB08F207E3C6700DA7ED1 /* GamePresenterSpecs.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B25FB091207E439800DA7ED1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B25FB092207E43A400DA7ED1 /* GameViewControllerSpecs.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B25FB094207E4A2400DA7ED1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B25FB095207E4A3600DA7ED1 /* GameMock.swift */,
+				B25FB097207E4BBB00DA7ED1 /* GameViewMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		B28CD168207B96E80041CBBC /* BullsEyeTests */ = {
 			isa = PBXGroup;
 			children = (
+				B25FB094207E4A2400DA7ED1 /* Mocks */,
+				B25FB091207E439800DA7ED1 /* View */,
+				B25FB08E207E3C5400DA7ED1 /* Presenter */,
 				B25FB085207CE78C00DA7ED1 /* Game */,
-				B28CD169207B96E80041CBBC /* BullsEyeTests.swift */,
 				B28CD16B207B96E80041CBBC /* Info.plist */,
 			);
 			path = BullsEyeTests;
@@ -160,6 +203,7 @@
 		DD848B711EEBA850007D8A56 /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				B25FB08B207E3C3100DA7ED1 /* Presenter */,
 				B25FB088207E3A5300DA7ED1 /* View */,
 				B25FB082207CE75200DA7ED1 /* Game */,
 				576C244720767216008E9B82 /* Model */,
@@ -369,8 +413,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B28CD16A207B96E80041CBBC /* BullsEyeTests.swift in Sources */,
+				B25FB093207E43A400DA7ED1 /* GameViewControllerSpecs.swift in Sources */,
+				B25FB096207E4A3600DA7ED1 /* GameMock.swift in Sources */,
 				B25FB087207CE79B00DA7ED1 /* BullsEyeSpecs.swift in Sources */,
+				B25FB098207E4BBB00DA7ED1 /* GameViewMock.swift in Sources */,
+				B25FB090207E3C6700DA7ED1 /* GamePresenterSpecs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +430,7 @@
 				DD848B751EEBA850007D8A56 /* ViewController.swift in Sources */,
 				DD848B731EEBA850007D8A56 /* AppDelegate.swift in Sources */,
 				B25FB08A207E3A7500DA7ED1 /* GameViewController.swift in Sources */,
+				B25FB08D207E3C4700DA7ED1 /* GamePresenter.swift in Sources */,
 				576C244620766C6B008E9B82 /* ScoreCell.swift in Sources */,
 				576C24492076721F008E9B82 /* Score.swift in Sources */,
 				576C24442076518E008E9B82 /* ScoresViewController.swift in Sources */,
