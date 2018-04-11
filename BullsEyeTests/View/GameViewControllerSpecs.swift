@@ -21,6 +21,19 @@ class GameViewControllerSpecs: QuickSpec {
         self.viewController = nil
       }
       
+      describe("hitMeTapped") {
+        it("calls presenter's hit method with slider value") {
+          let presenterMock = GamePresenterMock(view: self.viewController)
+          self.viewController.presenter = presenterMock
+          self.viewController.slider.value = 16
+          
+          self.viewController.hitMeTapped()
+          
+          expect(presenterMock.calledHit).to(beTrue())
+          expect(presenterMock.hitValue).to(equal(16))
+        }
+      }
+      
       describe("updateScoreLabel") {
         it("updates label with proper value") {
           self.viewController.updateScoreLabel(value: 10)

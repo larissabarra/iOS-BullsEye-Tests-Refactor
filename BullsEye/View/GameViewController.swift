@@ -10,7 +10,8 @@ class GameViewController: UIViewController {
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   
   @IBAction func hitMeTapped() {
-    
+    let guess: Int = Int(slider.value)
+    presenter?.hit(value: guess)
   }
   
   @IBAction func sliderMoved(_ slider: UISlider) {
