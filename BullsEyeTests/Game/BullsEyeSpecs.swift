@@ -90,7 +90,7 @@ class BullsEyeSpecs: QuickSpec {
           }
           
           it("returns perfection level as perfect") {
-            let level = bullsEye.hit(guess: target)
+            let level = bullsEye.hit(guess: target).perfection
             expect(level).to(equal(PerfectionLevel.perfect))
           }
         }
@@ -102,7 +102,7 @@ class BullsEyeSpecs: QuickSpec {
           }
           
           it("returns perfection level as almost") {
-            let level = bullsEye.hit(guess: abs(target-1))
+            let level = bullsEye.hit(guess: abs(target-1)).perfection
             expect(level).to(equal(PerfectionLevel.almost))
           }
         }
@@ -116,7 +116,7 @@ class BullsEyeSpecs: QuickSpec {
           
           it("returns perfection level as good") {
             bullsEye.target = 50
-            let level = bullsEye.hit(guess: 60)
+            let level = bullsEye.hit(guess: 60).perfection
             expect(level).to(equal(PerfectionLevel.good))
           }
         }
@@ -130,7 +130,7 @@ class BullsEyeSpecs: QuickSpec {
           
           it("returns perfection level as bad") {
             bullsEye.target = 50
-            let level = bullsEye.hit(guess: 20)
+            let level = bullsEye.hit(guess: 20).perfection
             expect(level).to(equal(PerfectionLevel.bad))
           }
         }
