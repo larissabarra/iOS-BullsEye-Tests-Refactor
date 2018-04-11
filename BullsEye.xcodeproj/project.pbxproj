@@ -19,6 +19,7 @@
 		B25FB093207E43A400DA7ED1 /* GameViewControllerSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FB092207E43A400DA7ED1 /* GameViewControllerSpecs.swift */; };
 		B25FB096207E4A3600DA7ED1 /* GameMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FB095207E4A3600DA7ED1 /* GameMock.swift */; };
 		B25FB098207E4BBB00DA7ED1 /* GameViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FB097207E4BBB00DA7ED1 /* GameViewMock.swift */; };
+		B266E0FC207E8A8D00F20319 /* GamePresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266E0FB207E8A8D00F20319 /* GamePresenterMock.swift */; };
 		DD848B731EEBA850007D8A56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD848B721EEBA850007D8A56 /* AppDelegate.swift */; };
 		DD848B751EEBA850007D8A56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD848B741EEBA850007D8A56 /* ViewController.swift */; };
 		DD848B781EEBA850007D8A56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD848B761EEBA850007D8A56 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		B25FB092207E43A400DA7ED1 /* GameViewControllerSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewControllerSpecs.swift; sourceTree = "<group>"; };
 		B25FB095207E4A3600DA7ED1 /* GameMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMock.swift; sourceTree = "<group>"; };
 		B25FB097207E4BBB00DA7ED1 /* GameViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewMock.swift; sourceTree = "<group>"; };
+		B266E0FB207E8A8D00F20319 /* GamePresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenterMock.swift; sourceTree = "<group>"; };
 		B28CD167207B96E70041CBBC /* BullsEyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullsEyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28CD16B207B96E80041CBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC88DCD7DAA3A76C60CF3BA0 /* Pods_BullsEye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BullsEye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +163,7 @@
 			children = (
 				B25FB095207E4A3600DA7ED1 /* GameMock.swift */,
 				B25FB097207E4BBB00DA7ED1 /* GameViewMock.swift */,
+				B266E0FB207E8A8D00F20319 /* GamePresenterMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B266E0FC207E8A8D00F20319 /* GamePresenterMock.swift in Sources */,
 				B25FB093207E43A400DA7ED1 /* GameViewControllerSpecs.swift in Sources */,
 				B25FB096207E4A3600DA7ED1 /* GameMock.swift in Sources */,
 				B25FB087207CE79B00DA7ED1 /* BullsEyeSpecs.swift in Sources */,
