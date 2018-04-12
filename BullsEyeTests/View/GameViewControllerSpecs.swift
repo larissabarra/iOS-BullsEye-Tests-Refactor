@@ -41,6 +41,14 @@ class GameViewControllerSpecs: QuickSpec {
           expect(self.viewController.scoreLabel.text).to(equal("10"))
         }
       }
+      
+      describe("updateRoundLabel") {
+        it("updates label with proper value") {
+          self.viewController.updateRoundLabel(value: 10)
+          
+          expect(self.viewController.roundLabel.text).to(equal("10"))
+        }
+      }
     }
   }
 }
