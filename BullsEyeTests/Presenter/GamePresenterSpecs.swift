@@ -28,6 +28,16 @@ class GamePresenterSpecs: QuickSpec {
           expect(gameMock.round).to(equal(1))
           expect(gameMock.score).to(equal(0))
         }
+        
+        fit("calls view to update round count to 1 and score to 0") {
+          let viewMock = GameViewMock()
+          let presenter = GamePresenter(view: viewMock)
+          
+          expect(viewMock.calledUpdateRoundLabel).to(beTrue())
+          expect(viewMock.calledUpdateRoundLabelWithValue).to(equal(1))
+          expect(viewMock.didCallUpdateScoreLabel).to(beTrue())
+          expect(viewMock.didCallUpdateScoreLabelWithValue).to(equal(0))
+        }
       }
       
       describe("hit") {

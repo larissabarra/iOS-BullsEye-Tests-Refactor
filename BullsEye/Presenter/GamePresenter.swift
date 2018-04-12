@@ -8,7 +8,13 @@ class GamePresenter {
     
     self.view?.presenter = self
     
+    reset()
+  }
+  
+  func reset() {
     game.reset()
+    view?.updateRoundLabel(value: game.round)
+    view?.updateScoreLabel(value: game.score)
   }
   
   func hit(value: Int) {

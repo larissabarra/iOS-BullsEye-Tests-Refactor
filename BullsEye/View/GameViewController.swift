@@ -26,7 +26,7 @@ class GameViewController: UIViewController {
     scoreLabel.text = String(value)
   }
   
-  override func viewDidAppear(_ animated: Bool) {
-    presenter = GamePresenter(view: self)
+  func updateRoundLabel(value: Int) {
+    roundLabel.text = String(value)
   }
 }
