@@ -35,7 +35,7 @@ class GameViewController: UIViewController {
   }
   
   func setSlider(value: Int) {
-    
+    slider.value = Float(value)
   }
   
   override func viewDidLoad() {

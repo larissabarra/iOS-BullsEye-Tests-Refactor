@@ -57,6 +57,15 @@ class GameViewControllerSpecs: QuickSpec {
           expect(self.viewController.targetLabel.text).to(equal("10"))
         }
       }
+      
+      describe("setSlider") {
+        it("resets slider with proper value") {
+          self.viewController.slider.value = 0
+          self.viewController.setSlider(value: 50)
+          
+          expect(self.viewController.slider.value).to(equal(50))
+        }
+      }
     }
   }
 }
