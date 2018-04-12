@@ -83,6 +83,13 @@ class GamePresenterSpecs: QuickSpec {
           
           expect(viewMock.calledUpdateScoreLabel).to(beTrue())
         }
+        
+        it("calls the view to reset slider to 50") {
+          presenter.newRound()
+          
+          expect(viewMock.calledSetSlider).to(beTrue())
+          expect(viewMock.calledSetSliderWithValue).to(equal(50))
+        }
       }
       
       describe("hit") {

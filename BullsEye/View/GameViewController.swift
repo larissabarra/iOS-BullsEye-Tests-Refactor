@@ -34,6 +34,10 @@ class GameViewController: UIViewController {
     targetLabel.text = String(value)
   }
   
+  func setSlider(value: Int) {
+    
+  }
+  
   override func viewDidLoad() {
     presenter = GamePresenter(view: self)
   }

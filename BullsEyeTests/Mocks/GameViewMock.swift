@@ -10,6 +10,9 @@ class GameViewMock: GameViewController {
   var calledUpdateTargetLabel = false
   var calledUpdateTargetLabelWithValue: Int?
   
+  var calledSetSlider = false
+  var calledSetSliderWithValue: Int?
+  
   override func updateScoreLabel(value: Int) {
     calledUpdateScoreLabel = true
     calledUpdateScoreLabelWithValue = value
@@ -23,6 +26,11 @@ class GameViewMock: GameViewController {
   override func updateTargetLabel(value: Int) {
     calledUpdateTargetLabel = true
     calledUpdateTargetLabelWithValue = value
+  }
+  
+  override func setSlider(value: Int) {
+    calledSetSlider = true
+    calledSetSliderWithValue = value
   }
   
   override func viewDidLoad() {}

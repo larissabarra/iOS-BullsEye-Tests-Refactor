@@ -19,6 +19,7 @@ class GamePresenter {
   func newRound() {
     game.newRound()
     updateLabels()
+    view?.setSlider(value: 50)
   }
   
   func hit(value: Int) {
