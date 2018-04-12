@@ -58,6 +58,15 @@ class GamePresenterSpecs: QuickSpec {
           
           expect(gameMock.calledNewRound).to(beTrue())
         }
+        
+        it("calls the view to update round label with proper value") {
+          let round = gameMock.round
+          
+          presenter.newRound()
+          
+          expect(viewMock.calledUpdateRoundLabel).to(beTrue())
+          expect(viewMock.calledUpdateRoundLabelWithValue).to(equal(round+1))
+        }
       }
       
       describe("hit") {

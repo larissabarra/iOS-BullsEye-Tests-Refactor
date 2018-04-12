@@ -15,6 +15,7 @@ class GameMock: Game {
   
   func newRound() {
     calledNewRound = true
+    round += 1
   }
   
   func reset() {
