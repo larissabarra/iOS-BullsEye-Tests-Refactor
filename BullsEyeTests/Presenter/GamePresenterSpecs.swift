@@ -31,18 +31,24 @@ class GamePresenterSpecs: QuickSpec {
         it("starts with a Game instance") {
           expect(presenter.game).to(beAKindOf(Game.self))
         }
-        
+      }
+      
+      describe("reset") {
         it("starts a new game and resets rounds and score") {
           expect(gameMock.calledReset).to(beTrue())
           expect(gameMock.round).to(equal(1))
           expect(gameMock.score).to(equal(0))
         }
         
-        fit("calls view to update round count to 1 and score to 0") {
+        it("calls view to update round count to 1, score to 0 and target") {
           expect(viewMock.calledUpdateRoundLabel).to(beTrue())
           expect(viewMock.calledUpdateRoundLabelWithValue).to(equal(1))
-          expect(viewMock.didCallUpdateScoreLabel).to(beTrue())
-          expect(viewMock.didCallUpdateScoreLabelWithValue).to(equal(0))
+          
+          expect(viewMock.calledUpdateScoreLabel).to(beTrue())
+          expect(viewMock.calledUpdateScoreLabelWithValue).to(equal(0))
+          
+          expect(viewMock.calledUpdateTargetLabel).to(beTrue())
+          expect(viewMock.calledUpdateTargetLabelWithValue).to(equal(gameMock.target))
         }
       }
       
@@ -59,8 +65,8 @@ class GamePresenterSpecs: QuickSpec {
           
           presenter.hit(value: 16)
           
-          expect(viewMock.didCallUpdateScoreLabel).to(beTrue())
-          expect(viewMock.didCallUpdateScoreLabelWithValue).to(equal(999))
+          expect(viewMock.calledUpdateScoreLabel).to(beTrue())
+          expect(viewMock.calledUpdateScoreLabelWithValue).to(equal(999))
         }
       }
     }

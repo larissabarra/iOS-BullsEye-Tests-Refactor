@@ -15,6 +15,7 @@ class GamePresenter {
     game.reset()
     view?.updateRoundLabel(value: game.round)
     updateScoreLabel()
+    updateTargetLabel()
   }
   
   func hit(value: Int) {
@@ -24,5 +25,9 @@ class GamePresenter {
   
   private func updateScoreLabel() {
     view?.updateScoreLabel(value: game.score)
+  }
+  
+  private func updateTargetLabel() {
+    view?.updateTargetLabel(value: game.target)
   }
 }

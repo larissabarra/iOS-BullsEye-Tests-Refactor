@@ -30,6 +30,10 @@ class GameViewController: UIViewController {
     roundLabel.text = String(value)
   }
   
+  func updateTargetLabel(value: Int) {
+    targetLabel.text = String(value)
+  }
+  
   override func viewDidLoad() {
     presenter = GamePresenter(view: self)
   }
