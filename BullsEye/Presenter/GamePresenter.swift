@@ -22,11 +22,12 @@ class GamePresenter {
     game.newRound()
     updateRoundLabel()
     updateTargetLabel()
+    updateScoreLabel()
   }
   
   func hit(value: Int) {
     _ = game.hit(guess: value)
-    updateScoreLabel()
+    newRound()
   }
   
   private func updateScoreLabel() {

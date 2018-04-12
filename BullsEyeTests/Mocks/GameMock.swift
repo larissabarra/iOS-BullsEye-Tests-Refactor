@@ -31,6 +31,7 @@ class GameMock: Game {
   func hit(guess: Int) -> Score {
     didCallHit = true
     didCallHitWithValue = guess
-    return Score(score: 149, perfection: .almost)
+    score += guess
+    return Score(score: score + guess, perfection: .almost)
   }
 }

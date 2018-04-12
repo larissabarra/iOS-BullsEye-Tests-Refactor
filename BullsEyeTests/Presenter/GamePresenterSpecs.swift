@@ -77,6 +77,12 @@ class GamePresenterSpecs: QuickSpec {
           expect(target).notTo(equal(gameMock.target))
           expect(viewMock.calledUpdateTargetLabelWithValue).to(equal(gameMock.target))
         }
+        
+        it("calls the view to update score label") {
+          presenter.newRound()
+          
+          expect(viewMock.calledUpdateScoreLabel).to(beTrue())
+        }
       }
       
       describe("hit") {
@@ -93,7 +99,7 @@ class GamePresenterSpecs: QuickSpec {
           presenter.hit(value: 16)
           
           expect(viewMock.calledUpdateScoreLabel).to(beTrue())
-          expect(viewMock.calledUpdateScoreLabelWithValue).to(equal(999))
+          expect(viewMock.calledUpdateScoreLabelWithValue).to(equal(1015))
         }
       }
     }
