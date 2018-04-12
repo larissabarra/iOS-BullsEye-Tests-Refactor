@@ -18,6 +18,10 @@ class GamePresenter {
     updateTargetLabel()
   }
   
+  func newRound() {
+    game.newRound()
+  }
+  
   func hit(value: Int) {
     _ = game.hit(guess: value)
     updateScoreLabel()

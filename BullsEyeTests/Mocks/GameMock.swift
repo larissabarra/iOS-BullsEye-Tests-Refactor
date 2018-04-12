@@ -11,7 +11,10 @@ class GameMock: Game {
   
   var calledReset = false
   
+  var calledNewRound = false
+  
   func newRound() {
+    calledNewRound = true
   }
   
   func reset() {

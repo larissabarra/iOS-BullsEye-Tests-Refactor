@@ -52,6 +52,14 @@ class GamePresenterSpecs: QuickSpec {
         }
       }
       
+      describe("newRound") {
+        it("calls the game's new round method") {
+          presenter.newRound()
+          
+          expect(gameMock.calledNewRound).to(beTrue())
+        }
+      }
+      
       describe("hit") {
         it("calls the game's hit method with proper value") {
           presenter.hit(value: 16)
