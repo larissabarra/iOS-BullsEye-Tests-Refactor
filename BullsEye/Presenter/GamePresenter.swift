@@ -14,11 +14,15 @@ class GamePresenter {
   func reset() {
     game.reset()
     view?.updateRoundLabel(value: game.round)
-    view?.updateScoreLabel(value: game.score)
+    updateScoreLabel()
   }
   
   func hit(value: Int) {
     _ = game.hit(guess: value)
+    updateScoreLabel()
+  }
+  
+  private func updateScoreLabel() {
     view?.updateScoreLabel(value: game.score)
   }
 }
