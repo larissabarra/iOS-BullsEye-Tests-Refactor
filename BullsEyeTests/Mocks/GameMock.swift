@@ -1,3 +1,5 @@
+import Foundation
+
 @testable import BullsEye
 
 class GameMock: Game {
@@ -16,12 +18,14 @@ class GameMock: Game {
   func newRound() {
     calledNewRound = true
     round += 1
+    target = (target + 1) % 100
   }
   
   func reset() {
     calledReset = true
     round = 1
     score = 0
+    target = 1
   }
   
   func hit(guess: Int) -> Score {

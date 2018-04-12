@@ -21,6 +21,7 @@ class GamePresenter {
   func newRound() {
     game.newRound()
     updateRoundLabel()
+    updateTargetLabel()
   }
   
   func hit(value: Int) {
