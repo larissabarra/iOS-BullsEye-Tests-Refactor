@@ -25,6 +25,9 @@ class GamePresenter {
   func hit(value: Int) {
     let roundResult = game.hit(guess: value)
     view?.showAlert(title: roundResult.perfection.rawValue, points: roundResult.score)
+  }
+  
+  func alertDismissed() {
     newRound()
   }
   

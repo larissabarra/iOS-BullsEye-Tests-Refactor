@@ -41,7 +41,9 @@ class GameViewController: UIViewController {
   func showAlert(title: String, points: Int) {
     let alert = UIAlertController(title: title, message: "You scored \(points) points", preferredStyle: .alert)
     
-    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+    let action = UIAlertAction(title: "Ok", style: .default) { _ in
+      self.presenter?.alertDismissed()
+    }
     
     alert.addAction(action)
     present(alert, animated: true, completion: nil)
