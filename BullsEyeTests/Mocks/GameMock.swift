@@ -32,6 +32,6 @@ class GameMock: Game {
     didCallHit = true
     didCallHitWithValue = guess
     score += guess
-    return Score(score: score + guess, perfection: .almost)
+    return Score(score: score, perfection: .almost)
   }
 }

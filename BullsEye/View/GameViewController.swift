@@ -38,6 +38,10 @@ class GameViewController: UIViewController {
     slider.value = Float(value)
   }
   
+  func showAlert(title: String, points: Int) {
+    
+  }
+  
   override func viewDidLoad() {
     presenter = GamePresenter(view: self)
   }

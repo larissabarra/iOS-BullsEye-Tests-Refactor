@@ -100,6 +100,16 @@ class GamePresenterSpecs: QuickSpec {
           expect(gameMock.didCallHitWithValue).to(equal(16))
         }
         
+        it("calls view to show alert with score") {
+          gameMock.score = 4
+          
+          presenter.hit(value: 16)
+          
+          expect(viewMock.calledShowAlert).to(beTrue())
+          expect(viewMock.calledAlertWithTitle).to(equal("You almost had it!"))
+          expect(viewMock.calledAlertWithPoints).to(equal(20))
+        }
+        
         it("calls view to update score") {
           gameMock.score = 999
           

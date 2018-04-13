@@ -1,8 +1,8 @@
-enum PerfectionLevel: Int {
-  case perfect
-  case almost
-  case good
-  case bad
+enum PerfectionLevel: String {
+  case perfect = "Perfect!"
+  case almost = "You almost had it!"
+  case good = "Pretty good!"
+  case bad = "Not even close..."
 }
 
 struct Score {
