@@ -66,6 +66,18 @@ class GameViewControllerSpecs: QuickSpec {
           expect(self.viewController.slider.value).to(equal(50))
         }
       }
+      
+      describe("showAlert") {
+        it("shows an alert telling the guess was perfect") {
+          UIApplication.shared.keyWindow?.rootViewController = self.viewController
+          
+          self.viewController.showAlert(title: "Perfect!", points: 200)
+          
+          let alertController = self.viewController.presentedViewController as! UIAlertController
+          expect(alertController.title).to(equal("Perfect!"))
+          expect(alertController.message).to(equal("You scored 200 points"))
+        }
+      }
     }
   }
 }

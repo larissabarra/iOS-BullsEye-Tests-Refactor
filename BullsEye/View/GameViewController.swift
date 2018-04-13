@@ -39,7 +39,12 @@ class GameViewController: UIViewController {
   }
   
   func showAlert(title: String, points: Int) {
+    let alert = UIAlertController(title: title, message: "You scored \(points) points", preferredStyle: .alert)
     
+    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+    
+    alert.addAction(action)
+    present(alert, animated: true, completion: nil)
   }
   
   override func viewDidLoad() {
